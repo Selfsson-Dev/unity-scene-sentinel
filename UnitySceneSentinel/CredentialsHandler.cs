@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitySceneSentinel
 {
-    internal class CredentialsHandler
+    public class CredentialsHandler
     {
         private string username;
         private string password;
@@ -17,10 +17,11 @@ namespace UnitySceneSentinel
             this.password = password;
         }
 
-        //TODO ADD SQL
-        internal bool IsAuthenticated()
+        // TODO ADD SQL
+        // ENCRYPT PASSWORD??? MAYBE, lots of maybes.
+        public bool IsAuthenticated()
         {
-            return true;
+            return true; // FIX TEMPORARY
         }
     }
 }

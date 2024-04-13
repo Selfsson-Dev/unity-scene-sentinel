@@ -21,8 +21,7 @@ namespace UnitySceneSentinel
 
             if (credentialsHandler.IsAuthenticated())
             {
-                Popup popup = new Popup("Authenticated successfully");
-                popup.ShowDialog();
+                MessageBox.Show("Authenticated successfully");
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace UnitySceneSentinel
 {
-    partial class Popup
+    partial class ProjectView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            okButton = new Button();
-            popupLabel = new Label();
+            projectBox = new ComboBox();
+            projectText = new Label();
             SuspendLayout();
             // 
-            // okButton
+            // projectBox
             // 
-            okButton.Location = new Point(132, 77);
-            okButton.Name = "okButton";
-            okButton.Size = new Size(75, 23);
-            okButton.TabIndex = 0;
-            okButton.Text = "okay?";
-            okButton.UseVisualStyleBackColor = true;
-            okButton.Click += okButton_Click;
+            projectBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            projectBox.FormattingEnabled = true;
+            projectBox.Location = new Point(12, 27);
+            projectBox.Name = "projectBox";
+            projectBox.Size = new Size(269, 23);
+            projectBox.Sorted = true;
+            projectBox.TabIndex = 0;
+            projectBox.SelectedIndexChanged += projectBox_SelectedIndexChanged;
             // 
-            // popupLabel
+            // projectText
             // 
-            popupLabel.AutoSize = true;
-            popupLabel.Location = new Point(99, 20);
-            popupLabel.Name = "popupLabel";
-            popupLabel.Size = new Size(136, 15);
-            popupLabel.TabIndex = 1;
-            popupLabel.Text = "Awesome text goes here";
-            popupLabel.TextAlign = ContentAlignment.MiddleCenter;
+            projectText.AutoSize = true;
+            projectText.Location = new Point(12, 9);
+            projectText.Name = "projectText";
+            projectText.Size = new Size(77, 15);
+            projectText.TabIndex = 1;
+            projectText.Text = "Project select\r\n";
             // 
-            // Popup
+            // ProjectView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 112);
-            Controls.Add(popupLabel);
-            Controls.Add(okButton);
-            Name = "Popup";
-            Text = "Popup";
+            ClientSize = new Size(984, 561);
+            Controls.Add(projectText);
+            Controls.Add(projectBox);
+            Name = "ProjectView";
+            Text = "Unity Scene Sentinel by Oswald";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button okButton;
-        private Label popupLabel;
+        private ComboBox projectBox;
+        private Label projectText;
     }
 }

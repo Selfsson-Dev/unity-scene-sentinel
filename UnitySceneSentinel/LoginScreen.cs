@@ -28,9 +28,10 @@ namespace UnitySceneSentinel
                 controller.VerifyLogin(usernameInput.Text, passwordInput.Text);
         }
 
+        // Maybe theres a better way, who know. I have impostor syndrom.
         private void exitButton_Click(object sender, EventArgs e)
         {
-
+            Environment.Exit(0);
         }
 
         private void usernameInput_TextChanged(object sender, EventArgs e)
